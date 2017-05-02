@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 4s;
+  animation-name: fade;
+  animation-duration: 4s;
+}
+@-webkit-keyframes fade {
+  from {opacity: 0.1} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: 0.1} 
+  to {opacity: 1}
+}
+</style>
+</head>
+
+<body>
+<div class="SL fade" 
+style="text-align:center;" >
+<h1>My Mom's Favorite Color</h1>
+<img src="images\pink.jpg" 
+width=800px height=400px>
+<h2>This's her favorite color because it looks like flowers</h2>
+</div>
+
+<div class="SL fade" 
+style="text-align:center;" >
+<h1>My Mom's Favorite Shoes</h1>
+<img src="images\shoes.jpg" 
+width=800px height=400px>
+<h2>This's her favorite shoes because she likes the color red</h2>
+</div>
+
+<div class="SL fade" 
+style="text-align:center;" >
+<h1>My Mom's Favorite Candy</h1>
+<img src="images\candy.jpg" 
+width=800px height=400px>
+<h2>This's her favorite candy because its yummy</h2>
+</div>
+
+<div class="SL fade" 
+style="text-align:center;" >
+<h1>My Mom's Favorite Food</h1>
+<img src="images\fish.jpg" 
+width=800px height=400px>
+<h2>This's her favorite food because its healthy</h2>
+</div>
+
+<div class="SL fade" 
+style="text-align:center;" >
+<h1>This Is My Mom</h1>
+<img src="images\my_mom.jpg" 
+width=800px height=400px>
+<h2>This is what my mom likes</h2>
+</div>
+
+<script>
+var slideIndex = 0;
+function showSlides() {
+var i;
+var slides = document.getElementsByClassName("SL");
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+}
+slideIndex++;
+if (slideIndex>=slides.length) 
+   {slideIndex = 0}    
+slides[slideIndex].style.display = "block";  
+setTimeout(showSlides, 7000);
+}
+slideIndex--;
+showSlides();
+</script>
+</body>
+</html> 

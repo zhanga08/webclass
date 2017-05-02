@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 4s;
+  animation-name: fade;
+  animation-duration: 4s;
+}
+@-webkit-keyframes fade {
+  from {opacity: 0.1} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: 0.1} 
+  to {opacity: 1}
+}
+</style>
+</head>
+
+<body>
+<div class="SL fade" 
+style="text-align:center;" >
+<h1>Mom's Favorite Pics</h1>
+<img src="images\n1.jpg" 
+width=800px height=400px>
+<h2>This's her favorite sea</h2>
+</div>
+
+<div class="SL fade" 
+style="text-align:center;" >
+<h1>Mom's Favorite Pics</h1>
+<img src="images\n8.jpg" 
+width=800px height=400px>
+<h2>This's her favorite house</h2>
+</div>
+
+<div class="SL fade" 
+style="text-align:center;" >
+<h1>Mom's Favorite Pics</h1>
+<img src="images\n9.jpg" 
+width=800px height=400px>
+<h2>This's her favorite sunset</h2>
+</div>
+
+<div class="SL fade" 
+style="text-align:center;" >
+<h1>Mom's Favorite Pics</h1>
+<img src="images\n11.jpg" 
+width=800px height=400px>
+<h2>This's her favorite field</h2>
+</div>
+
+<script>
+var slideIndex = 0;
+function showSlides() {
+var i;
+var slides = document.getElementsByClassName("SL");
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+}
+slideIndex++;
+if (slideIndex>=slides.length) 
+   {slideIndex = 0}    
+slides[slideIndex].style.display = "block";  
+setTimeout(showSlides, 4000);
+}
+slideIndex--;
+showSlides();
+</script>
+</body>
+</html> 
